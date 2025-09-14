@@ -1,0 +1,128 @@
+:root {
+  --red: #aa1e22;
+  --gold: #f2a900;
+  --blue: #002d72;
+  --light-gray: #f5f5f5;
+  --dark-gray: #333;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  margin: 0;
+  background: var(--light-gray);
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--blue);
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.tagline {
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+main {
+  background: #fff;
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.profile-section {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profile-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+}
+
+h2 {
+  color: var(--blue);
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  background: var(--light-gray);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  background: var(--light-gray);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.tech-stack {
+  font-size: 0.9rem;
+  color: var(--blue);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-links {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
